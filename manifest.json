@@ -1,7 +1,7 @@
 {
     "name": "anesthesia_record",
     "short_name": "anesthesia_record",
-    "start_url": ".",
+    "start_url": "/anesthesia-pwa/",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",

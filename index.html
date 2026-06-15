@@ -17,6 +17,23 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-<script src="flutter_bootstrap.js" async></script>
+<script>
+    // 💡 GitHub Pagesのサブフォルダ階層に対応してサービスワーカーを強制起動するスクリプト
+    window.addEventListener('load', function(ev) {
+      // ⚠️ '/anesthesia-pwa/' の部分は、ご自身のリポジトリ名に完全に一致させてください
+      const serviceWorkerVersion = "1186050547";
+
+      _flutter.loader.load({
+        serviceWorkerSettings: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+</script>
 </body>
 </html>
